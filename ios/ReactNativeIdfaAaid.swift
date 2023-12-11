@@ -12,7 +12,7 @@ class ReactNativeIdfaAaid: NSObject {
 
     @objc(getAdvertisingInfo:withRejecter:)
     func getAdvertisingInfo(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
-        if #available(iOS 14, *) {
+        if #available(iOS 14.5, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
                 switch status {
                     case .authorized:
